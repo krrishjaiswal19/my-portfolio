@@ -11,7 +11,7 @@ const Skills = () => (
     {/* Section Title */}
     <div className="text-center mb-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
+      <div className="w-24 h-1 bg-[#51b8d8] mx-auto mt-2"></div>
       <p className="text-gray-400 mt-4 text-lg font-semibold">
       A collection of my technical skills and expertise honed through various projects and experiences
       </p>
@@ -39,23 +39,40 @@ const Skills = () => (
             transitionSpeed={1000}
             gyroscope={true}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+            {/* <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
+                  className="flex flex-wrap items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-1 sm:px-1 text-center"
                 >
                   <img
                     src={skill.logo}
                     alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
+                    className="w-6 h-6 sm:w-5 sm:h-5 flex-shrink-0 "
                   />
-                  <span className="text-xs sm:text-sm text-gray-300">
+                  <span className="text-s sm:text-sm text-gray-300">
                     {skill.name}
                   </span>
                 </div>
               ))}
-            </div>
+            </div> */}
+            <div className="flex flex-wrap gap-3 justify-center">
+  {category.skills.map((skill) => (
+    <div
+      key={skill.name}
+      className="inline-flex items-center gap-2 border-2 border-gray-700 rounded-full px-3 py-1 whitespace-nowrap"
+    >
+      <img
+        src={skill.logo}
+        alt={`${skill.name} logo`}
+        className="w-5 h-5"
+      />
+      <span className="text-xs sm:text-sm text-gray-300">
+        {skill.name}
+      </span>
+    </div>
+  ))}
+</div>
           </Tilt>
         </div>
       ))}

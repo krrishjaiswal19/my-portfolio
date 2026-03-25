@@ -31,9 +31,10 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
+    // { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
@@ -45,11 +46,11 @@ const Navbar = () => {
       <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
         <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Tarun</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Kaushik</span>
-          <span className="text-[#8245ec]">&gt;</span>
+          {/* <span className="text-[#51b8d8]">&lt;</span> */}
+          <span className="text-white">Krrish</span>
+          {/* <span className="text-[#51b8d8]">/</span> */}
+          <span className="text-white">jaiswal</span>
+          {/* <span className="text-[#51b8d8]">&gt;</span> */}
         </div>
 
         {/* Desktop Menu */}
@@ -57,8 +58,8 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
+              className={`cursor-pointer hover:text-[#51b8d8] ${
+                activeSection === item.id ? "text-[#51b8d8]" : ""
               }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
@@ -71,18 +72,18 @@ const Navbar = () => {
         {/* Social Icons */}
         <div className="hidden md:flex space-x-4">
           <a
-            href="https://github.com/codingmastr"
+            href="https://github.com/krrishjaiswal19"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#51b8d8]"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
+            href="https://www.linkedin.com/in/krrishjaiswal19/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#51b8d8]"
           >
             <FaLinkedin size={24} />
           </a>
@@ -92,12 +93,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#51b8d8] cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#51b8d8] cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -112,7 +113,7 @@ const Navbar = () => {
               <li
                 key={item.id}
                 className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
+                  activeSection === item.id ? "text-[#51b8d8]" : ""
                 }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
@@ -122,7 +123,7 @@ const Navbar = () => {
             ))}
             <div className="flex space-x-4">
               <a
-                href="https://github.com/codingmastr"
+                href="https://github.com/krrishjaiswal19"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
@@ -130,7 +131,7 @@ const Navbar = () => {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
+                href="https://www.linkedin.com/in/krrishjaiswal19/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
